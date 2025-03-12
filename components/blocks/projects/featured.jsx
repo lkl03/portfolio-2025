@@ -12,7 +12,7 @@ import content 		from '../../../content/projects/featured.json'
 
 export default function FeaturedProject({ content }, index) {
 
-	const { project, url, repo, descriptionTitle,description, stack, imageOptions, images } = content
+	const { project, url, repo, repoUrl, descriptionTitle,description, stack, imageOptions, images } = content
 
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
@@ -39,7 +39,14 @@ export default function FeaturedProject({ content }, index) {
 			<div className={css.details}>
 				<div className={css.projectHeader}>
 					<div className={css.header}>
-						<h3 className="highlight">{project}</h3><span className={css.privateOr}><i className="devicon-github-plain"></i>{repo}</span>	
+					<h3 className="highlight">{project}</h3>
+{repo && repoUrl && (
+    <a href={repoUrl}>
+        <span className={css.privateOr}>
+            <i className="devicon-github-plain"></i>{repo}
+        </span>
+    </a>
+)}
 					</div>
 					<div className={css.description}>
 						<p><strong>{descriptionTitle}</strong> {description}</p>
@@ -48,7 +55,7 @@ export default function FeaturedProject({ content }, index) {
 						<Badges list={stack} block="stack" fullContainer={false} color={false} />
 					</div>
 					<m.div variants={''} className={css.viewProject}>
-						<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
+						<a href={url}><Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} /></a>
 					</m.div>
 				</div>
 			</div>

@@ -1,7 +1,7 @@
 {
 	"intro": {
-		"start": "const Andrew = ( name, passion ) =>",
-		"end": "Hello, my name is",
+		"start": "const Luca = ( name, passion ) =>",
+		"end": "Hi! :) I'm...",
 		"speed": 60,
 		"deletionSpeed": 80,
 		"wrapper": "h2",
@@ -11,15 +11,15 @@
 	},
 
 	"header": {
-		"name": "Andrew Nelson.",
+		"name": "Luca Lago.",
 		"usp": "I design and build meaningful experiences."
 	},
 
-	"paragraph": "I am a digital polymath — a constantly evolving digital creator driven by a passion for lifelong learning and the desire to leave a lasting impact.",
+	"paragraph": "Loving what you do is key to creating exceptional work, and that's my ultimate aim in this journey.",
 
 	"buttons": {
 		"primary": {
-			"title": "Contact Me",
+			"title": "Email Me",
 			"url": "",
 			"leaveSite": false
 		},
