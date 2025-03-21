@@ -52,32 +52,7 @@ export default function Badges({ list, block, color, fullContainer }) {
 		}
 	}
 
-	return (
-		<m.ul
-			className={`${badges.list} ${badges[block]} ${badges[fullContainer]}`}
-			//Animations
-				ref={ref}
-				variants={container}
-				initial="hidden"
-				animate={controls}
-				whileHover="hover"
-		>
-		{
-		list.map( ({ key, name, type }) => {
-			return ( 
-				<m.li 
-					key={name} 
-					className={`${badges.item} ${key}`}
-					//Animations
-					variants={item} >
-					<IconModule iconKey={key} iconType={type} color={color}/>
-					<span className={badges.title}>{name}</span>
-				</m.li> 
-				)
-			}) 
-		}
-		</m.ul>
-	)
+
 }
 
 function IconModule({ iconKey, iconType, color }) {

@@ -39,20 +39,20 @@ export default function About() {
 					</div>
 					<div className={about.copy} >
 						<CopyBlock 
-							title="Softskills that pay the bills"
+							title="How I started"
 							containerClass={about.container}
 							iconClass={about.icon}
-							icon={[ 'fat', 'ear-listen' ]}
-							copy="In addition to my design and technical expertise—I also have strong leadership, time management, and multitasking skills—honed through my experience as a business owner / managing partner, husband, and father of two. Outside of work, I enjoy staying active through sports such as hockey and snowboarding. I am confident in my ability to bring passion and value to any project."
+							icon={[ 'fat', 'face-smile' ]}
+							copy="My passion for building websites began in childhood when I created a fan blog for the online game Club Penguin in 2012. At that time, website design wasn't nearly as widespread as it is today, but that early experience sparked a deep and lasting interest in the field. Over the years, I've progressed from mastering the fundamentals of Adobe Photoshop, HTML, and CSS to exploring advanced JavaScript and modern frameworks like ReactJS and NextJS. Eventually, I specialized in UI design, becoming proficient with industry-standard design tools such as Figma and Adobe XD. My development background, combined with my growing passion for design, allows me to engage fully across the entire creative process—from conceptualizing ideas from scratch to bringing them to life in functional apps and websites."
 						/>
 						<BadgesBlock 
-							title="Reasearch and planning" 
+							title="Hobbies and Interests" 
 							containerClass={about.container}
 							list={methods} 
 							fullContainer="fullContainer"
 							block="methods" 
-							icon="fingerprint"
-							copy="One of my favorite aspects of creating is planning the architecture of a project. From Design Systems to Brand Strategy—I enjoy working with the many touch points of user experience."
+							icon="pencil-paintbrush"
+							copy="When I'm not behind the lines of code, I like to go running, enjoy reading a good book, listen to quality music, or watch a good movie. I also have a YouTube channel where I bring out my creative side apart from design stuff :)"
 							//invertedColor="invertedColor"
 							headerIcon={`${about.icon}`}
 						/>
@@ -63,11 +63,4 @@ export default function About() {
 	)
 }
 
-const methods 	= [
-	{ key: 'planet-moon', 		name: 'User Research', 		type: 'fad' },
-	{ key: 'qrcode', 			name: 'Digital Strategy', 	type: 'fad' },
-	{ key: 'window', 			name: 'Design Systems', 	type: 'fad' },
-	{ key: 'cubes', 			name: 'Product Strategy', 	type: 'far' },
-	{ key: 'layer-plus', 		name: 'Brand Strategy', 	type: 'fad' },
-	{ key: 'solar-system', 		name: 'Operations', 		type: 'fad' },
-]
+const methods 	= []
