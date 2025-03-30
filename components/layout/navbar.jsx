@@ -94,28 +94,16 @@ export default function Navbar() {
 			}
 
 			maybeHideNav() {
-
-				/**
-				 * If scrolling down, else if scrolling up
-				 * 
-				 * Add or remove hidden class from filter menu
-				 */
-				const nC 		= window.sticky.nav.classList
-				// const hero 		= document.querySelector('main > div:first-of-type')
-				// const hiddenAt 	= ( hero ) ? hero.getBoundingClientRect().bottom + window.scrollY : ( window.innerHeight / 2 )
-				const hiddenAt	= ( window.innerHeight / 2 )
-
-				if ( window.scrollY > this.lastY && window.scrollY > hiddenAt && ! nC.contains( css.hidden ) ) {
-					nC.add( css.hidden )
-				} else if ( window.scrollY < this.lastY && nC.contains( css.hidden ) ) {
-					nC.remove( css.hidden )
+				const nC = window.sticky.nav.classList;
+			  
+				if (window.scrollY > 0 && !nC.contains(css.visible)) {
+				  nC.add(css.visible);
+				} else if (window.scrollY === 0 && nC.contains(css.visible)) {
+				  nC.remove(css.visible);
 				}
-
-				/**
-				 * At end of every scroll event update the previous position
-				 */
-				this.lastY = window.scrollY
-			}
+			  
+				this.lastY = window.scrollY;
+			  }
 		}
 
 		const scrollEvents = new ScrollEvents

@@ -1,0 +1,126 @@
+@charset "UTF-8";
+.section .area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.section .area h3 {
+  margin-top: -0.25rem;
+  margin-bottom: 0.35rem;
+}
+.section .area h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.section .area h5 {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  opacity: 0.5;
+}
+.section .company {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.section .company.reverse {
+  flex-direction: row-reverse;
+}
+.section .company,
+.section .position {
+  border: 1px solid var(--primary-dark);
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: var(--padding);
+  --padding: 2rem;
+  --padding-left: var(--padding);
+  --padding-top: var(--padding);
+  --padding-right: var(--padding);
+  --padding-bottom: var(--padding);
+  background: var(--background-dim2);
+}
+.section .companyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: calc(var(--grid-32) * 20);
+}
+.section .companyContent.textEnd {
+  text-align: end;
+}
+.section .companyPositions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.section .position {
+  margin-left: calc(var(--grid-32) * 2);
+  background: var(--background-dim);
+  max-width: 100%;
+}
+.section .position.first .content {
+  padding-bottom: 0;
+}
+.section .position .positionContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section .position .positionContent .list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.section .position .positionContent .list .subList {
+  position: relative;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  display: block;
+  color: var(--primary);
+}
+.section .position .positionContent .list .subList .bullet {
+  position: absolute;
+  margin-left: -1.5rem;
+}
+.section .position .positionContent .list .subList .bullet:before {
+  content: "⇒";
+}
+.section .technicalSvg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.section .technicalSvg img {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 767px) {
+  .section .area .company,
+  .section .area .position {
+    padding: 2rem 1rem;
+  }
+  .section .area .position {
+    padding-bottom: 1rem;
+    --padding-top: 1rem;
+  }
+  .section .area .companyContent {
+    max-width: 100%;
+  }
+  .section .area .positionContent {
+    gap: 1rem;
+    max-width: 100%;
+  }
+  .section .area p {
+    font-size: 0.8rem;
+  }
+  .section .area ul.list li {
+    font-size: 0.8rem;
+  }
+  .section .area ul:not(.list) li {
+    font-size: 0.6rem;
+  }
+}/*# sourceMappingURL=career.module.css.map */

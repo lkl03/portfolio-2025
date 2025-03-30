@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /**
+  	Why the fuck isnt this working?
+
+  	Get it working to get cool hover effect on steal this theme section!
+  	**/
+}
+.container > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-3x);
+}
+.container h4 {
+  margin-bottom: var(--size-1x);
+}
+.container a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+.container a:hover {
+  color: var(--primary-bright);
+}
+.container p {
+  font-size: 0.875rem;
+}
+.container .sections {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.container .sections svg {
+  height: 0.875rem;
+  vertical-align: -0.1rem;
+  margin-left: 0.125rem;
+}
+.container .sections ul:nth-of-type(1) {
+  width: calc(var(--grid-32) * 12 - 2rem);
+}
+.container .sections ul:nth-of-type(2) {
+  width: calc(var(--grid-32) * 12 - 2rem);
+}
+.container .sections ul li {
+  overflow-wrap: break-word;
+  margin-bottom: var(--size-2-);
+}
+.container .socialList {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.container .socialList svg {
+  height: 2rem;
+}
+.container .svg-inline--fa.fa-code-branch {
+  margin-left: 1rem;
+}
+.container .svg-inline--fa.fa-code-branch .fa-secondary {
+  fill: #a371f7;
+  opacity: 1;
+}
+.container .github * {
+  font-size: 1rem;
+  font-family: var(--font-accent);
+  font-weight: 600;
+  letter-spacing: -0.01rem;
+}
+.container .github > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  gap: var(--size-2-);
+  filter: grayscale(1);
+}
+.container .github > a:hover {
+  filter: grayscale(0);
+}
+.container .github > a ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .container .sections {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+  .container .sections ul {
+    width: 100% !important;
+  }
+  .container .sections .socialList {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=footer.module.css.map */

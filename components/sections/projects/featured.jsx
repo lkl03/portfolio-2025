@@ -14,12 +14,12 @@ import content 		from '../../../content/projects/featured.json'
 export default function FeaturedProjects() {
 
 	return (
-		<Section classProp={css.hasBg}>	
+		<Section id="featured-projects" classProp={css.hasBg}>	
 			<Container spacing={'verticalXXXXLrg'}>
 				<SectionTitle
 					title="Featured Projects"
-					preTitle="UI/UX Design & Front-End Development"
-					subTitle="Focused on the experience, driven by the engineering."
+					preTitle="Discover My"
+					subTitle="A selection of my favorite projects that reflect my approach."
 				/> 				{
 				content.map( (data, index) => {
 					return (

@@ -1,0 +1,21 @@
+.fullScreen {
+  width: 100%;
+  max-width: 100%;
+}
+
+.readingWidth {
+  width: 100%;
+  max-width: var(--reading-width);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .readingWidth {
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}/*# sourceMappingURL=container.module.css.map */

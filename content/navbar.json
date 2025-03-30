@@ -1,18 +1,18 @@
 [
 	{
-		"url": "/",
-		"title": "About Me"
+		"url": "/#featured-projects",
+		"title": "My Projects"
 	},
 	{
-		"url": "/case-studies",
-		"title": "Case Studies"
+		"url": "/#about-me",
+		"title": "Get to Know Me"
 	},
 	{
-		"url": "/articles",
-		"title": "Articles"
+		"url": "/#my-experience",
+		"title": "My Experience"
 	},
 	{
-		"url": "/projects",
-		"title": "Projects"
+		"url": "/#contact",
+		"title": "Let's Connect!"
 	}
 ]

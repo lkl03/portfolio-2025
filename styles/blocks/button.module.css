@@ -1,0 +1,47 @@
+button.primary {
+  background-color: var(--secondary);
+  color: var(--background);
+}
+button.primary:hover {
+  background-color: var(--secondary-bright);
+}
+button.secondary {
+  background-color: transparent;
+  border: 1px solid var(--primary-dark);
+  color: var(--primary);
+}
+button.secondary:hover {
+  color: var(--primary-bright);
+  background-color: var(--primary-dark);
+}
+
+a.link {
+  cursor: pointer;
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  border-radius: 99rem;
+  border: none;
+  margin-right: 1rem;
+  transition: all, cubic-bezier(0.4, 0, 0.2, 1), 750ms;
+}
+a.link:hover {
+  transition: all, cubic-bezier(0.4, 0, 0.2, 1), 750ms;
+}
+a.primary {
+  background-color: var(--secondary);
+  color: var(--background);
+}
+a.primary:hover {
+  background-color: var(--secondary-bright);
+}
+a.secondary {
+  background-color: transparent;
+  border: 1px solid var(--primary-dark);
+  color: var(--primary);
+}
+a.secondary:hover {
+  color: var(--primary-bright);
+  background-color: var(--primary-dark);
+}/*# sourceMappingURL=button.module.css.map */

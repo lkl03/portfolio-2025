@@ -1,5 +1,24 @@
 @import '../../scss/mixins';
 
+@keyframes smoothFloat {
+	0% {
+	  transform: translate(0%, -10%);
+	}
+	25% {
+	  transform: translate(-15%, 0%);
+	}
+	50% {
+	  transform: translate(0%, 10%);
+	}
+	75% {
+	  transform: translate(15%, 0%);
+	}
+	100% {
+	  transform: translate(0%, -10%);
+	}
+  }
+  
+
 // Section
 .section {
 
@@ -50,9 +69,11 @@
 			gap: var(--size-1x);
 			border: 1px solid var(--primary-dark);
 			border-radius: 2rem;
-			background: var(--background-dim2);
+			background: var(--background-dim3);
 			box-shadow: 0 0 30px var(--background);
 			overflow: hidden;
+			-webkit-backdrop-filter: blur(10px);
+			backdrop-filter: blur(10px);
 
 			padding: var(--padding);
 			--padding: 2rem;
@@ -120,6 +141,20 @@
 					filter: brightness(100%);
 				}
 			}
+		}
+
+		.background {
+			flex-basis: 0;
+			position: absolute;
+			flex-grow: 0;
+			flex-shrink: 0;
+			@media (min-width: 1024px) {
+				bottom: -20%;
+			}
+		}
+
+		.moveHorizontal {
+			animation: smoothFloat 20s ease-in-out infinite;
 		}
 	}
 }

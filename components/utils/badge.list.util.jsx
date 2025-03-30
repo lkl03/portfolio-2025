@@ -11,7 +11,7 @@ import Icon from '../utils/icon.util.jsx'
 import badges from '../../styles/blocks/badges.module.scss';
 
 
-export default function Badges({ list, block, color, fullContainer }) {
+export default function Badges({ list, block, color, fullContainer, align = 'start' }) {
 
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
@@ -20,7 +20,7 @@ export default function Badges({ list, block, color, fullContainer }) {
 	})
 
 	useEffect( () => {
-		if ( inView ) {	controls.start("visible") }
+		if ( inView ) { controls.start("visible") }
 		if ( !inView ) { controls.start("hidden") }
 	}, [ controls, inView ] );
 
@@ -52,7 +52,32 @@ export default function Badges({ list, block, color, fullContainer }) {
 		}
 	}
 
+	const alignmentStyle = align === 'end' ? { justifyContent: 'flex-end' } : { justifyContent: 'flex-start' };
 
+	return (
+		<m.ul
+			className={`${badges.list} ${badges[block]} ${badges[fullContainer]}`}
+			ref={ref}
+			variants={container}
+			initial="hidden"
+			animate={controls}
+			whileHover="hover"
+			style={alignmentStyle}
+		>
+			{
+				list.map( ({ key, name, type }) => (
+					<m.li 
+						key={name} 
+						className={`${badges.item} ${key}`}
+						variants={item}
+					>
+						<IconModule iconKey={key} iconType={type} color={color}/>
+						<span className={badges.title}>{name}</span>
+					</m.li> 
+				))
+			}
+		</m.ul>
+	)
 }
 
 function IconModule({ iconKey, iconType, color }) {
@@ -71,5 +96,6 @@ function IconModule({ iconKey, iconType, color }) {
 			return ( '' )
 	}
 }
+		
 		
 		

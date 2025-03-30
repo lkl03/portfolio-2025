@@ -58,15 +58,19 @@
 			font-size: 1rem;
 		}
 		.header {
-			font-size: 2.9rem;
+			font-size: 2.4rem;
 		}
 		.tempBright {
 			width: 100%;
 			padding-right: 1rem;
 		}
-		button {
+		button, a {
 			font-size: .875rem;
 			padding: 0.75rem 2rem;
+		}
+		a.scrollDown {
+			font-size: 1.25rem;
+			bottom: 1rem;
 		}
 	}
 }
@@ -171,3 +175,31 @@
 		}
 	}
 }
+
+.scrollDown {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	animation: bounce 2s infinite;
+	color: #fff; // Adjust color to your design
+	transition: opacity 0.3s;
+	font-size: 1.5rem;
+  
+	&:hover {
+	  opacity: 0.8;
+	}
+  }
+  
+  @keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	  transform: translateX(-50%) translateY(0);
+	}
+	40% {
+	  transform: translateX(-50%) translateY(-10px);
+	}
+	60% {
+	  transform: translateX(-50%) translateY(-5px);
+	}
+  }
