@@ -19,7 +19,7 @@ export default function FeaturedProjects() {
 				<SectionTitle
 					title="Featured Projects"
 					preTitle="Discover My"
-					subTitle="A selection of my favorite projects that reflect my approach."
+					subTitle="A selection of my favorite work, reflecting my approach."
 				/> 				{
 				content.map( (data, index) => {
 					return (

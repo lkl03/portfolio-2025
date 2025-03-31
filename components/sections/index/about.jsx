@@ -33,13 +33,13 @@ export default function About() {
 					subTitle="A brief overview of my background and interests."
 				/>
 				<section className={about.content}>
-					<div className={`${about.image} ${about.background} ${about.technicalSvg} ${about.moveHorizontal}`}>
+					<div className={`${about.image} ${about.background} ${about.technicalSvg} ${about.moveHorizontal}`} style={{ zIndex: -1 }}>
 						<Image src="/img/dataism-24.svg" width={477} height={1111} alt="Data Strings 01 by Colorpong: https://ywft.us/2177b695b" />
 					</div>
-					<div className={about.image}>
-						<img src="/img/myself.jpg" alt="My photo"/>
+					{/*<div className={about.image}>*/}
+						{/*<img src="/img/myself.jpg" alt="My photo"/>*/}
 						{/* <Image src="/img/family-photo.jpg" width={600} height={800}/> */}
-					</div>
+					{/*</div>*/}
 					
 					<div className={about.copy} >
 						<CopyBlock 
