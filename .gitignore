@@ -50,6 +50,7 @@ typings/
 .npm
 .yarn-integrity
 *.tgz
+.npmrc       # <--- Added to ignore local npm config
 
 # Lint & testing
 .eslintcache
@@ -86,5 +87,8 @@ dist/
 # TernJS
 .tern-port
 
-# Mac system files
+# macOS system files
 .DS_Store
+
+# VS Code settings (optional, if using VS Code)
+.vscode/
