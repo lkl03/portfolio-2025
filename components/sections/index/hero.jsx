@@ -72,7 +72,7 @@ export default function Hero() {
 
       {/* Scroll Down Icon */}
       <a href="#featured-projects" className={hero.scrollDown}>
-        <Icon icon={['fas', 'chevrons-down']} />
+        <Icon icon={['fas', 'chevron-down']} />
       </a>
 
       <HeroBg theme="bg-color-1" />
