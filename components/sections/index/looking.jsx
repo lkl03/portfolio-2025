@@ -91,7 +91,7 @@ export default function Looking() {
         <section style={{ marginTop: '1rem', display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
           <a
 						className={`button ${button.primary}`}
-						href="mailto:ll.lucalago@gmail.com"
+						href="mailto:lucanhlago@gmail.com"
 						target="_blank" rel="noopener noreferrer"
 					>
 						Email Me
